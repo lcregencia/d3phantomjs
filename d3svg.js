@@ -10,8 +10,6 @@ page.open('http://127.0.0.1:5501/index.html', function(status) {
   console.log("Status: " + status);
   if(status === "success") {
 
-    console.log("inside if");
-
      var html = page.evaluate(function(s) {    
 
            var sn = new XMLSerializer();
