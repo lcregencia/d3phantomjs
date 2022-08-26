@@ -1,0 +1,70 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<title>Number Circle</title>
+</head>
+<body>
+	<div class="d3NumberCircle" id="d3NumberCircle1">
+		<svg id="svg_d3NumberCircle1"></svg>					
+	</div>
+	
+	
+	<!-- External JS libraries -->
+	<script src="http://d3js.org/d3.v5.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+	<script>
+		var graphData1 = {
+			"id": "d3NumberCircle1",
+			"brandcolor": "#A0FFA0",
+			"title": "1"
+		}
+
+		const MARGIN = { LEFT: 10, RIGHT: 10, TOP: 10, BOTTOM: 10 }
+		const WIDTH = 100
+		const HEIGHT = 100
+
+		function GenerateNumberCircle(param)  {
+			var div = d3.selectAll("svg")
+				.attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
+				.attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
+				//.attr("id", "svg_" + param.id)
+
+			var g = div.append("g")
+				.attr("transform", `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
+
+			g.append("circle")
+			.attr("cx", 50)
+			.attr("cy", 50)
+			.attr("r", 50)
+			.attr("fill", param.brandcolor)
+
+			g.append("text")  
+			.attr("x", 50)
+			.attr("y", 70)
+			.attr("font-family", "Arial")
+			.attr("font-weight", 600)
+			.attr("font-size", "60px")
+			.attr("text-anchor", "middle")
+			.text(param.title)
+		}
+
+		GenerateNumberCircle(graphData1);
+		
+		var s = document.querySelector('#d3NumberCircle1').innerHTML;
+		
+		console.log(s);
+		
+	</script>		
+</body>
+</html>
+
+
+
+
+
+
+
+
