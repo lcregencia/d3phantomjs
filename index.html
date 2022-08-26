@@ -30,6 +30,9 @@
 			var div = d3.selectAll("svg")
 				.attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
 				.attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
+				.attr('version', '1.1')
+ 				 .attr('xmlns', 'http://www.w3.org/2000/svg')
+ 				 .attr('xmlns:xlink', 'http://www.w3.org/1999/xlink')
 				//.attr("id", "svg_" + param.id)
 
 			var g = div.append("g")
